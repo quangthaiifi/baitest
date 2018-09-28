@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-// Generated Sep 28, 2018 9:48:26 AM by Hibernate Tools 5.2.10.Final
+// Generated Sep 28, 2018 2:22:56 PM by Hibernate Tools 5.2.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +23,7 @@ public class Libraries implements java.io.Serializable {
 	private Addresses addresses;
 	private String libraryName;
 	private String libraryDetails;
-	private Set booksAtLibrarieses = new HashSet(0);
+	private Set<BooksAtLibraries> booksAtLibrarieses = new HashSet<BooksAtLibraries>(0);
 
 	public Libraries() {
 	}
@@ -34,7 +34,7 @@ public class Libraries implements java.io.Serializable {
 	}
 
 	public Libraries(Long libraryId, Addresses addresses, String libraryName, String libraryDetails,
-			Set booksAtLibrarieses) {
+			Set<BooksAtLibraries> booksAtLibrarieses) {
 		this.libraryId = libraryId;
 		this.addresses = addresses;
 		this.libraryName = libraryName;
@@ -82,11 +82,11 @@ public class Libraries implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "libraries")
-	public Set getBooksAtLibrarieses() {
+	public Set<BooksAtLibraries> getBooksAtLibrarieses() {
 		return this.booksAtLibrarieses;
 	}
 
-	public void setBooksAtLibrarieses(Set booksAtLibrarieses) {
+	public void setBooksAtLibrarieses(Set<BooksAtLibraries> booksAtLibrarieses) {
 		this.booksAtLibrarieses = booksAtLibrarieses;
 	}
 

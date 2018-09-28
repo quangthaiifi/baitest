@@ -58,5 +58,5 @@ public interface BooksAtLibrariesService {
 	 */
 	public Boolean exist(BooksAtLibraries booksAtLibraries);
 	
-	public List<BooksAtLibraries> findAll();
+	public List<BooksAtLibraries> getAll();
 }

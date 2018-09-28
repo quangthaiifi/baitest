@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-// Generated Sep 28, 2018 9:48:26 AM by Hibernate Tools 5.2.10.Final
+// Generated Sep 28, 2018 2:22:56 PM by Hibernate Tools 5.2.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,12 +22,12 @@ public class Authors implements java.io.Serializable {
 	private Long authorId;
 	private String authorFirstName;
 	private String authorLastName;
-	private Set booksByAuthors = new HashSet(0);
+	private Set<BooksByAuthor> booksByAuthors = new HashSet<BooksByAuthor>(0);
 
 	public Authors() {
 	}
 
-	public Authors(String authorFirstName, String authorLastName, Set booksByAuthors) {
+	public Authors(String authorFirstName, String authorLastName, Set<BooksByAuthor> booksByAuthors) {
 		this.authorFirstName = authorFirstName;
 		this.authorLastName = authorLastName;
 		this.booksByAuthors = booksByAuthors;
@@ -64,11 +64,11 @@ public class Authors implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "authors")
-	public Set getBooksByAuthors() {
+	public Set<BooksByAuthor> getBooksByAuthors() {
 		return this.booksByAuthors;
 	}
 
-	public void setBooksByAuthors(Set booksByAuthors) {
+	public void setBooksByAuthors(Set<BooksByAuthor> booksByAuthors) {
 		this.booksByAuthors = booksByAuthors;
 	}
 

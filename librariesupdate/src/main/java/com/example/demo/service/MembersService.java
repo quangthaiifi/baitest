@@ -60,5 +60,5 @@ public interface MembersService {
 	 */
 	public Boolean exist(Members members);
 	
-	public List<Members> findAll();
+	public List<Members> getAll();
 }

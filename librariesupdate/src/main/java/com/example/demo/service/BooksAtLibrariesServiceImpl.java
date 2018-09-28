@@ -63,7 +63,7 @@ public class BooksAtLibrariesServiceImpl implements BooksAtLibrariesService {
 	}
 
 	@Override
-	public List<BooksAtLibraries> findAll() {
+	public List<BooksAtLibraries> getAll() {
 		// TODO Auto-generated method stub
 		return booksAtLibrariesRepository.findAll();
 	}

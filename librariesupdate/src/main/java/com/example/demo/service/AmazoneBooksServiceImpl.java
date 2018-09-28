@@ -111,9 +111,11 @@ public class AmazoneBooksServiceImpl implements AmazoneBooksService {
 	}
 
 	@Override
-	public List<AmazoneBooks> findAll() {
+	public List<AmazoneBooks> getAll() {
 		// TODO Auto-generated method stub
 		return amazoneBooksRepository.findAll();
 	}
+
+	
 
 }

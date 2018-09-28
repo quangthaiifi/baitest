@@ -58,5 +58,5 @@ public interface BooksByAuthorService {
 	 */
 	public Boolean exist(BooksByAuthor booksByAuthor);
 	
-	public List<BooksByAuthor> findAll();
+	public List<BooksByAuthor> getAll();
 }

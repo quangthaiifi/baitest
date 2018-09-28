@@ -115,7 +115,7 @@ public class MembersServiceImpl implements MembersService {
 	}
 
 	@Override
-	public List<Members> findAll() {
+	public List<Members> getAll() {
 		// TODO Auto-generated method stub
 		return membersRepository.findAll();
 	}

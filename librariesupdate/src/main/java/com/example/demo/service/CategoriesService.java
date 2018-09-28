@@ -60,5 +60,5 @@ public interface CategoriesService {
 	 */
 	public Boolean exist(Categories categories);
 	
-	public List<Categories> findAll();
+	public List<Categories> getAll();
 }

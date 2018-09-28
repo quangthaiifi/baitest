@@ -95,7 +95,7 @@ public class CategoriesServiceImpl implements CategoriesService {
 	}
 
 	@Override
-	public List<Categories> findAll() {
+	public List<Categories> getAll() {
 		// TODO Auto-generated method stub
 		return categoriesRepository.findAll();
 	}

@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-// Generated Sep 28, 2018 9:48:26 AM by Hibernate Tools 5.2.10.Final
+// Generated Sep 28, 2018 2:22:56 PM by Hibernate Tools 5.2.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,12 +21,12 @@ public class Categories implements java.io.Serializable {
 
 	private Long categoryId;
 	private String categoryName;
-	private Set booksByCategories = new HashSet(0);
+	private Set<BooksByCategory> booksByCategories = new HashSet<BooksByCategory>(0);
 
 	public Categories() {
 	}
 
-	public Categories(String categoryName, Set booksByCategories) {
+	public Categories(String categoryName, Set<BooksByCategory> booksByCategories) {
 		this.categoryName = categoryName;
 		this.booksByCategories = booksByCategories;
 	}
@@ -53,11 +53,11 @@ public class Categories implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categories")
-	public Set getBooksByCategories() {
+	public Set<BooksByCategory> getBooksByCategories() {
 		return this.booksByCategories;
 	}
 
-	public void setBooksByCategories(Set booksByCategories) {
+	public void setBooksByCategories(Set<BooksByCategory> booksByCategories) {
 		this.booksByCategories = booksByCategories;
 	}
 

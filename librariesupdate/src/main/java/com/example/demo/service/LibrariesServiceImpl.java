@@ -99,7 +99,7 @@ public class LibrariesServiceImpl implements LibrariesService {
 	}
 
 	@Override
-	public List<Libraries> findAll() {
+	public List<Libraries> getAll() {
 		// TODO Auto-generated method stub
 		return librariesRepository.findAll();
 	}

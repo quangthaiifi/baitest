@@ -60,5 +60,5 @@ public interface AmazoneBooksService {
 	 */
 	public Boolean exist(AmazoneBooks amazoneBooks);
 	
-	public List<AmazoneBooks> findAll();
+	public List<AmazoneBooks> getAll();
 }

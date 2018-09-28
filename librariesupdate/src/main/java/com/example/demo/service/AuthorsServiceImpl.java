@@ -99,9 +99,11 @@ public class AuthorsServiceImpl implements AuthorsService {
 	}
 
 	@Override
-	public List<Authors> findAll() {
+	public List<Authors> getAll() {
 		// TODO Auto-generated method stub
 		return authorsRepository.findAll();
 	}
+
+	
 
 }

@@ -60,5 +60,5 @@ public interface AuthorsService {
 	 */
 	public Boolean exist(Authors authors);
 	
-	List<Authors> findAll();
+	List<Authors> getAll();
 }

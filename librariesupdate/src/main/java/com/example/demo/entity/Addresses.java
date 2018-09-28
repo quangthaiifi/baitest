@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-// Generated Sep 28, 2018 9:48:26 AM by Hibernate Tools 5.2.10.Final
+// Generated Sep 28, 2018 2:22:56 PM by Hibernate Tools 5.2.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -28,15 +28,15 @@ public class Addresses implements java.io.Serializable {
 	private String stateProvicenCounty;
 	private String country;
 	private String otherAddressDetails;
-	private Set librarieses = new HashSet(0);
-	private Set memberses = new HashSet(0);
+	private Set<Libraries> librarieses = new HashSet<Libraries>(0);
+	private Set<Members> memberses = new HashSet<Members>(0);
 
 	public Addresses() {
 	}
 
 	public Addresses(String line1NumberBuilding, String line2NumberStreet, String line3areaLocality, String city,
-			String zipPostcode, String stateProvicenCounty, String country, String otherAddressDetails, Set librarieses,
-			Set memberses) {
+			String zipPostcode, String stateProvicenCounty, String country, String otherAddressDetails,
+			Set<Libraries> librarieses, Set<Members> memberses) {
 		this.line1NumberBuilding = line1NumberBuilding;
 		this.line2NumberStreet = line2NumberStreet;
 		this.line3areaLocality = line3areaLocality;
@@ -133,21 +133,21 @@ public class Addresses implements java.io.Serializable {
 		this.otherAddressDetails = otherAddressDetails;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "addresses")
-	public Set getLibrarieses() {
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "addresses")
+	public Set<Libraries> getLibrarieses() {
 		return this.librarieses;
 	}
 
-	public void setLibrarieses(Set librarieses) {
+	public void setLibrarieses(Set<Libraries> librarieses) {
 		this.librarieses = librarieses;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "addresses")
-	public Set getMemberses() {
+	public Set<Members> getMemberses() {
 		return this.memberses;
 	}
 
-	public void setMemberses(Set memberses) {
+	public void setMemberses(Set<Members> memberses) {
 		this.memberses = memberses;
 	}
 
