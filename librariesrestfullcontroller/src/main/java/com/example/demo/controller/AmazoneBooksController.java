@@ -63,7 +63,7 @@ public class AmazoneBooksController {
 		}
 	}
 
-	@PutMapping(value = "/save/",value = "{isbn}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@RequestBody AmazoneBooks amazoneBooks) {
 		return amazoneBooksService.save(amazoneBooks);
 	}

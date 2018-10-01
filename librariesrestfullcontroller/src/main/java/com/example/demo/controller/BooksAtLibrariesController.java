@@ -63,7 +63,7 @@ public class BooksAtLibrariesController {
 		}
 	}
 
-	@PutMapping(value = "/save/",value = "{booksHasLibrariesid}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@RequestBody BooksAtLibraries booksAtLibraries) {
 		return booksAtLibrariesService.save(booksAtLibraries);
 	}

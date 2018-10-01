@@ -63,7 +63,7 @@ public class BooksByAuthorController {
 		}
 	}
 
-	@PutMapping(value = "/save/",value = "{booksHasAuthorsid}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@RequestBody BooksByAuthor booksByAuthor) {
 		return booksByAuthorService.save(booksByAuthor);
 	}
