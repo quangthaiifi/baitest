@@ -33,7 +33,7 @@ public class LibrariesController {
 	private static final String NOT_FOUND ="Libraries not found";
 
 	@Autowired
-	private LibrariesServiceImpl librariesService;
+	private LibrariesService librariesService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class LibrariesController {
 		return libraries;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public Libraries create(@RequestBody Libraries libraries) {
 		LOGGER.info("Libraries creation request : {}", libraries);
 		if (librariesService.exist(libraries)) {
@@ -63,7 +63,7 @@ public class LibrariesController {
 		}
 	}
 
-	@PutMapping(value = "{libraryId}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@PathVariable("libraryId") Long libraryId, @RequestBody Libraries libraries) {
 		return librariesService.save(libraries);
 	}

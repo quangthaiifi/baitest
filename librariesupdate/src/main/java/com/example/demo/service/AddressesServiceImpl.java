@@ -79,46 +79,18 @@ public class AddressesServiceImpl implements AddressesService {
 			this.criteria = criteria;
 		}
 
-		@Override
-		public Predicate toPredicate(Root<Addresses> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-			final List<Predicate> predicates = new ArrayList<>();
-			if (StringUtils.isNotBlank(criteria.getLine1NumberBuilding())) {
-				predicates.add(builder.like(builder.lower(root.get("line1NumberBuilding")),
-						criteria.getLine1NumberBuilding().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getLine2NumberStreet())) {
-				predicates.add(builder.like(builder.lower(root.get("line2NumberStreet")),
-						criteria.getLine2NumberStreet().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getLine3areaLocality())) {
-				predicates.add(builder.like(builder.lower(root.get("line3areaLocality")),
-						criteria.getLine3areaLocality().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getCity())) {
-				predicates.add(builder.like(builder.lower(root.get("city")),
-						criteria.getCity().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getZipPostcode())) {
-				predicates.add(builder.like(builder.lower(root.get("zipPostcode")),
-						criteria.getZipPostcode().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getStateProvicenCounty())) {
-				predicates.add(builder.like(builder.lower(root.get("stateProvicenCounty")),
-						criteria.getStateProvicenCounty().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getCountry())) {
-				predicates.add(builder.like(builder.lower(root.get("country")),
-						criteria.getCountry().toLowerCase() + "%"));
-			}
-			if (StringUtils.isNotBlank(criteria.getOtherAddressDetails())) {
-				predicates.add(builder.like(builder.lower(root.get("otherAddressDetails")),
-						criteria.getOtherAddressDetails().toLowerCase() + "%"));
-			}
-			return andTogether(predicates, builder);
-		}
+	
 
 		private Predicate andTogether(List<Predicate> predicates, CriteriaBuilder builder) {
 			return builder.and(predicates.toArray(new Predicate[0]));
+		}
+
+
+
+		@Override
+		public Predicate toPredicate(Root<Addresses> arg0, CriteriaQuery<?> arg1, CriteriaBuilder arg2) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 	}
 

@@ -33,7 +33,7 @@ public class BooksController {
 	private static final String NOT_FOUND ="Books not found";
 
 	@Autowired
-	private BooksServiceImpl booksService;
+	private BooksService booksService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class BooksController {
 		return books;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public Books create(@RequestBody Books books) {
 		LOGGER.info("Books creation request : {}", books);
 		if (booksService.exist(books)) {
@@ -63,7 +63,7 @@ public class BooksController {
 		}
 	}
 
-	@PutMapping(value = "{isbn}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@PathVariable("isbn") Long isbn, @RequestBody Books books) {
 		return booksService.save(books);
 	}

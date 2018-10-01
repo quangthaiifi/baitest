@@ -33,7 +33,7 @@ public class AuthorsController {
 	private static final String NOT_FOUND ="Authors not found";
 
 	@Autowired
-	private AuthorsServiceImpl authorsService;
+	private AuthorsService authorsService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })

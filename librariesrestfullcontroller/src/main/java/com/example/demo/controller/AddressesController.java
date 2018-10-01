@@ -33,7 +33,7 @@ public class AddressesController {
 	private static final String NOT_FOUND ="Addresses not found";
 
 	@Autowired
-	private AddressesServiceImpl addressesService;
+	private AddressesService addressesService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class AddressesController {
 		return addresses;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public Addresses create(@RequestBody Addresses addresses) {
 		LOGGER.info("Addresses creation request : {}", addresses);
 		if (addressesService.exist(addresses)) {
@@ -63,7 +63,7 @@ public class AddressesController {
 		}
 	}
 
-	@PutMapping(value = "{addressId}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@PathVariable("addressId") Long addressId, @RequestBody Addresses addresses) {
 		return addressesService.save(addresses);
 	}

@@ -33,7 +33,7 @@ public class AmazoneBooksController {
 	private static final String NOT_FOUND ="AmazoneBooks not found";
 
 	@Autowired
-	private AmazoneBooksServiceImpl amazoneBooksService;
+	private AmazoneBooksService amazoneBooksService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class AmazoneBooksController {
 		return amazoneBooks;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public AmazoneBooks create(@RequestBody AmazoneBooks amazoneBooks) {
 		LOGGER.info("AmazoneBooks creation request : {}", amazoneBooks);
 		if (amazoneBooksService.exist(amazoneBooks)) {
@@ -63,7 +63,7 @@ public class AmazoneBooksController {
 		}
 	}
 
-	@PutMapping(value = "{isbn}", consumes = "application/json")
+	@PutMapping(value = "/save/",value = "{isbn}", consumes = "application/json")
 	public Boolean update(@PathVariable("isbn") Long isbn, @RequestBody AmazoneBooks amazoneBooks) {
 		return amazoneBooksService.save(amazoneBooks);
 	}

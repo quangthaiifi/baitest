@@ -33,7 +33,7 @@ public class MembersController {
 	private static final String NOT_FOUND ="Members not found";
 
 	@Autowired
-	private MembersServiceImpl membersService;
+	private MembersService membersService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class MembersController {
 		return members;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public Members create(@RequestBody Members members) {
 		LOGGER.info("Members creation request : {}", members);
 		if (membersService.exist(members)) {
@@ -63,7 +63,7 @@ public class MembersController {
 		}
 	}
 
-	@PutMapping(value = "{memberId}", consumes = "application/json")
+	@PutMapping(value = "/save/", consumes = "application/json")
 	public Boolean update(@PathVariable("memberId") Long memberId, @RequestBody Members members) {
 		return membersService.save(members);
 	}

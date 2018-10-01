@@ -33,7 +33,7 @@ public class CategoriesController {
 	private static final String NOT_FOUND ="Categories not found";
 
 	@Autowired
-	private CategoriesServiceImpl categoriesService;
+	private CategoriesService categoriesService;
 
 	@RequestMapping(value = "/",
 			produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -50,7 +50,7 @@ public class CategoriesController {
 		return categories;
 	}
 
-	@PostMapping(consumes = "application/json")
+	@PostMapping(value="/create/",consumes = "application/json")
 	public Categories create(@RequestBody Categories categories) {
 		LOGGER.info("Categories creation request : {}", categories);
 		if (categoriesService.exist(categories)) {
@@ -63,7 +63,7 @@ public class CategoriesController {
 		}
 	}
 
-	@PutMapping(value = "{categoryId}", consumes = "application/json")
+	@PutMappingvalue = "/save/", consumes = "application/json")
 	public Boolean update(@PathVariable("categoryId") Long categoryId, @RequestBody Categories categories) {
 		return categoriesService.save(categories);
 	}
