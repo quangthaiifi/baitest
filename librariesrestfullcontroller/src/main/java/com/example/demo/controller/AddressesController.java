@@ -64,7 +64,7 @@ public class AddressesController {
 	}
 
 	@PutMapping(value = "/save/", consumes = "application/json")
-	public Boolean update(@PathVariable("addressId") Long addressId, @RequestBody Addresses addresses) {
+	public Boolean update(@RequestBody Addresses addresses) {
 		return addressesService.save(addresses);
 	}
 

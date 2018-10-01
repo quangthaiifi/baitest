@@ -64,7 +64,7 @@ public class CategoriesController {
 	}
 
 	@PutMappingvalue = "/save/", consumes = "application/json")
-	public Boolean update(@PathVariable("categoryId") Long categoryId, @RequestBody Categories categories) {
+	public Boolean update(@RequestBody Categories categories) {
 		return categoriesService.save(categories);
 	}
 

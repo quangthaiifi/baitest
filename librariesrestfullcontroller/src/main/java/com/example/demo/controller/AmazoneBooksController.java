@@ -64,7 +64,7 @@ public class AmazoneBooksController {
 	}
 
 	@PutMapping(value = "/save/",value = "{isbn}", consumes = "application/json")
-	public Boolean update(@PathVariable("isbn") Long isbn, @RequestBody AmazoneBooks amazoneBooks) {
+	public Boolean update(@RequestBody AmazoneBooks amazoneBooks) {
 		return amazoneBooksService.save(amazoneBooks);
 	}
 

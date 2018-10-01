@@ -64,7 +64,7 @@ public class BooksAtLibrariesController {
 	}
 
 	@PutMapping(value = "/save/",value = "{booksHasLibrariesid}", consumes = "application/json")
-	public Boolean update(@PathVariable("booksHasLibrariesid") Long booksHasLibrariesid, @RequestBody BooksAtLibraries booksAtLibraries) {
+	public Boolean update(@RequestBody BooksAtLibraries booksAtLibraries) {
 		return booksAtLibrariesService.save(booksAtLibraries);
 	}
 

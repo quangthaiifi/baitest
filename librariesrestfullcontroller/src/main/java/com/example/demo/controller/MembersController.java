@@ -64,7 +64,7 @@ public class MembersController {
 	}
 
 	@PutMapping(value = "/save/", consumes = "application/json")
-	public Boolean update(@PathVariable("memberId") Long memberId, @RequestBody Members members) {
+	public Boolean update(@RequestBody Members members) {
 		return membersService.save(members);
 	}
 

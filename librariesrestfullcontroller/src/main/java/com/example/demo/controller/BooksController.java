@@ -64,7 +64,7 @@ public class BooksController {
 	}
 
 	@PutMapping(value = "/save/", consumes = "application/json")
-	public Boolean update(@PathVariable("isbn") Long isbn, @RequestBody Books books) {
+	public Boolean update(@RequestBody Books books) {
 		return booksService.save(books);
 	}
 
