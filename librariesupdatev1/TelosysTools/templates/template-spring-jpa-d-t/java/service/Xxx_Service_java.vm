@@ -1,0 +1,25 @@
+## Include
+#parse("include/var_entity.vm")
+## Use macro resolve header
+#package($SRC)
+## use macro for feed $haveCriteria
+#haveCriteria()
+
+import ${pack_entity}.${entityClass};
+import java.util.List;
+
+public interface $serviceInterface {
+
+	$entityClass getOne($keyArgsListWrapperType);
+
+	List<$entityClass> findAll();
+
+	Boolean delete($keyArgsListWrapperType);
+
+	$entityClass create($entityClass $entityInstance);
+
+	$entityClass update($entityClass $entityInstance);
+
+	Boolean exist($entityClass $entityInstance);
+}
+

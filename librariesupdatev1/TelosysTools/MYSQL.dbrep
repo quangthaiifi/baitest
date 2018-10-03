@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Telosys Database Repository --><root>
+<tableList databaseId="0" databaseName="MYSQL" databaseProductName="MySQL" generation="2018-10-02 05:39:18">
+<table catalog="libraries" databaseType="TABLE" javaBean="Addresses" name="addresses" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="address_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="addressId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Address id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="line_1_number_bulding" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="line1NumberBulding" javaType="java.lang.String" jdbcTypeCode="12" label="Line 1 number bulding" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="line_2_number_street" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="line2NumberStreet" javaType="java.lang.String" jdbcTypeCode="12" label="Line 2 number street" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="line_3_area_locality" dbNotNull="false" dbPosition="4" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="line3AreaLocality" javaType="java.lang.String" jdbcTypeCode="12" label="Line 3 area locality" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="city" dbNotNull="false" dbPosition="5" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="city" javaType="java.lang.String" jdbcTypeCode="12" label="City" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="zip_postcode" dbNotNull="false" dbPosition="6" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="zipPostcode" javaType="java.lang.String" jdbcTypeCode="12" label="Zip postcode" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="state_province_country" dbNotNull="false" dbPosition="7" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="stateProvinceCountry" javaType="java.lang.String" jdbcTypeCode="12" label="State province country" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="country" dbNotNull="false" dbPosition="8" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="country" javaType="java.lang.String" jdbcTypeCode="12" label="Country" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="other_address_detail" dbNotNull="false" dbPosition="9" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="otherAddressDetail" javaType="java.lang.String" jdbcTypeCode="12" label="Other address detail" maxLength="45" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_addresses" id="LINK_FK_fk_members_addresses_I" inverseSideOf="LINK_FK_fk_members_addresses_O" javaName="listOfMembers" javaType="java.util.List" joinTableName="" mappedBy="addresses" optional="" owningSide="false" sourceTableName="addresses" targetEntity="Members" targetTableName="members" used="true"/>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="AmazonBook" name="amazon_book" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="isbn" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="isbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Isbn" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="title" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="title" javaType="java.lang.String" jdbcTypeCode="12" label="Title" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="author" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="author" javaType="java.lang.String" jdbcTypeCode="12" label="Author" maxLength="45" notNull="false" selected="true"/>
+<column dateType="D" dbComment="" dbDefaultValue="" dbName="data_of_publication" dbNotNull="false" dbPosition="4" dbSize="10" dbTypeName="DATE" inputType="date" javaName="dataOfPublication" javaType="java.util.Date" jdbcTypeCode="91" label="Data of publication" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="publicsher" dbNotNull="false" dbPosition="5" dbSize="0" dbTypeName="BIT" inputType="checkbox" javaName="publicsher" javaType="java.lang.Boolean" jdbcTypeCode="-7" label="Publicsher" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="list_price" dbNotNull="false" dbPosition="6" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="listPrice" javaType="java.lang.String" jdbcTypeCode="12" label="List price" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="amazon_price" dbNotNull="false" dbPosition="7" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="amazonPrice" javaType="java.lang.String" jdbcTypeCode="12" label="Amazon price" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="your_saving" dbNotNull="false" dbPosition="8" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="yourSaving" javaType="java.lang.String" jdbcTypeCode="12" label="Your saving" maxLength="45" notNull="false" selected="true"/>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="Author" name="author" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="author_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="authorId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Author id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="author_first_name" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="authorFirstName" javaType="java.lang.String" jdbcTypeCode="12" label="Author first name" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="author_last_name" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="authorLastName" javaType="java.lang.String" jdbcTypeCode="12" label="Author last name" maxLength="45" notNull="false" selected="true"/>
+<link cardinality="ManyToMany" cascade="" fetch="DEFAULT" foreignKeyName="" id="LINK_JT_book_by_author_O" inverseSideOf="" javaName="listOfBooks" javaType="java.util.List" joinTableName="book_by_author" mappedBy="" optional="" owningSide="true" sourceTableName="author" targetEntity="Books" targetTableName="books" used="true">
+<joinTable name="book_by_author">
+<joinColumns>
+<joinColumn insertable="false" name="author_id" nullable="true" referencedColumnName="author_id" unique="false" updatable="false"/>
+</joinColumns>
+<inverseJoinColumns>
+<joinColumn insertable="false" name="isbn" nullable="true" referencedColumnName="isbn" unique="false" updatable="false"/>
+</inverseJoinColumns>
+</joinTable>
+</link>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="BookByAuthor" name="book_by_author" schema="">
+<column dbComment="" dbDefaultValue="" dbName="isbn" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="isbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Isbn" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="author_id" dbNotNull="true" dbPosition="2" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="authorId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Author id" notNull="true" selected="true"/>
+<fk name="fk_books_has_author_author1">
+<fkcol colname="author_id" colref="author_id" deferrable="7" deleterule="3" sequence="1" tablename="book_by_author" tableref="author" updaterule="3"/>
+</fk>
+<fk name="fk_books_has_author_books1">
+<fkcol colname="isbn" colref="isbn" deferrable="7" deleterule="3" sequence="1" tablename="book_by_author" tableref="books" updaterule="3"/>
+</fk>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="Books" name="books" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="isbn" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="isbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Isbn" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="book_title" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="bookTitle" javaType="java.lang.String" jdbcTypeCode="12" label="Book title" maxLength="45" notNull="false" selected="true"/>
+<column dateType="D" dbComment="" dbDefaultValue="" dbName="data_of_publication" dbNotNull="false" dbPosition="3" dbSize="10" dbTypeName="DATE" inputType="date" javaName="dataOfPublication" javaType="java.util.Date" jdbcTypeCode="91" label="Data of publication" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_has_books_books1" id="LINK_FK_fk_members_has_books_books1_I" inverseSideOf="LINK_FK_fk_members_has_books_books1_O" javaName="listOfMembersRequest" javaType="java.util.List" joinTableName="" mappedBy="books" optional="" owningSide="false" sourceTableName="books" targetEntity="MembersRequest" targetTableName="members_request" used="true"/>
+<link cardinality="ManyToMany" cascade="" fetch="DEFAULT" foreignKeyName="" id="LINK_JT_book_by_author_I" inverseSideOf="LINK_JT_book_by_author_O" javaName="listOfAuthor" javaType="java.util.List" joinTableName="book_by_author" mappedBy="listOfBooks" optional="" owningSide="false" sourceTableName="books" targetEntity="Author" targetTableName="author" used="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_books_has_libraries_books1" id="LINK_FK_fk_books_has_libraries_books1_I" inverseSideOf="LINK_FK_fk_books_has_libraries_books1_O" javaName="listOfBooksHasLibraries" javaType="java.util.List" joinTableName="" mappedBy="books" optional="" owningSide="false" sourceTableName="books" targetEntity="BooksHasLibraries" targetTableName="books_has_libraries" used="true"/>
+<link cardinality="ManyToMany" cascade="" fetch="DEFAULT" foreignKeyName="" id="LINK_JT_categories_has_books_O" inverseSideOf="" javaName="listOfCategories" javaType="java.util.List" joinTableName="categories_has_books" mappedBy="" optional="" owningSide="true" sourceTableName="books" targetEntity="Categories" targetTableName="categories" used="true">
+<joinTable name="categories_has_books">
+<joinColumns>
+<joinColumn insertable="false" name="books_isbn" nullable="true" referencedColumnName="isbn" unique="false" updatable="false"/>
+</joinColumns>
+<inverseJoinColumns>
+<joinColumn insertable="false" name="category_id" nullable="true" referencedColumnName="category_id" unique="false" updatable="false"/>
+</inverseJoinColumns>
+</joinTable>
+</link>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="BooksHasLibraries" name="books_has_libraries" schema="">
+<column dbComment="" dbDefaultValue="" dbName="books_isbn" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="booksIsbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Books isbn" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="libraries_library_id" dbNotNull="true" dbPosition="2" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="librariesLibraryId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Libraries library id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="quatity_in_stock" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="quatityInStock" javaType="java.lang.String" jdbcTypeCode="12" label="Quatity in stock" maxLength="45" notNull="false" selected="true"/>
+<fk name="fk_books_has_libraries_books1">
+<fkcol colname="books_isbn" colref="isbn" deferrable="7" deleterule="3" sequence="1" tablename="books_has_libraries" tableref="books" updaterule="3"/>
+</fk>
+<fk name="fk_books_has_libraries_libraries1">
+<fkcol colname="libraries_library_id" colref="library_id" deferrable="7" deleterule="3" sequence="1" tablename="books_has_libraries" tableref="libraries" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_books_has_libraries_libraries1" id="LINK_FK_fk_books_has_libraries_libraries1_O" inverseSideOf="" javaName="libraries" javaType="Libraries" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="books_has_libraries" targetEntity="Libraries" targetTableName="libraries" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="libraries_library_id" nullable="true" referencedColumnName="library_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_books_has_libraries_books1" id="LINK_FK_fk_books_has_libraries_books1_O" inverseSideOf="" javaName="books" javaType="Books" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="books_has_libraries" targetEntity="Books" targetTableName="books" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="books_isbn" nullable="true" referencedColumnName="isbn" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="Categories" name="categories" schema="">
+<column dbComment="" dbDefaultValue="" dbName="category_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="categoryId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Category id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="category_name" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="categoryName" javaType="java.lang.String" jdbcTypeCode="12" label="Category name" maxLength="45" notNull="false" selected="true"/>
+<link cardinality="ManyToMany" cascade="" fetch="DEFAULT" foreignKeyName="" id="LINK_JT_categories_has_books_I" inverseSideOf="LINK_JT_categories_has_books_O" javaName="listOfBooks" javaType="java.util.List" joinTableName="categories_has_books" mappedBy="listOfCategories" optional="" owningSide="false" sourceTableName="categories" targetEntity="Books" targetTableName="books" used="true"/>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="CategoriesHasBooks" name="categories_has_books" schema="">
+<column dbComment="" dbDefaultValue="" dbName="category_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="categoryId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Category id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="books_isbn" dbNotNull="true" dbPosition="2" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="booksIsbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Books isbn" notNull="true" selected="true"/>
+<fk name="fk_categories_has_books_books1">
+<fkcol colname="books_isbn" colref="isbn" deferrable="7" deleterule="3" sequence="1" tablename="categories_has_books" tableref="books" updaterule="3"/>
+</fk>
+<fk name="fk_categories_has_books_categories1">
+<fkcol colname="category_id" colref="category_id" deferrable="7" deleterule="3" sequence="1" tablename="categories_has_books" tableref="categories" updaterule="3"/>
+</fk>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="Libraries" name="libraries" schema="">
+<column dbComment="" dbDefaultValue="" dbName="library_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="libraryId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Library id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="library_name" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="libraryName" javaType="java.lang.String" jdbcTypeCode="12" label="Library name" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="orther_library_detail" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="ortherLibraryDetail" javaType="java.lang.String" jdbcTypeCode="12" label="Orther library detail" maxLength="45" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_books_has_libraries_libraries1" id="LINK_FK_fk_books_has_libraries_libraries1_I" inverseSideOf="LINK_FK_fk_books_has_libraries_libraries1_O" javaName="listOfBooksHasLibraries" javaType="java.util.List" joinTableName="" mappedBy="libraries" optional="" owningSide="false" sourceTableName="libraries" targetEntity="BooksHasLibraries" targetTableName="books_has_libraries" used="true"/>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="Members" name="members" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="member_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="memberId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Member id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="gender" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="gender" javaType="java.lang.String" jdbcTypeCode="12" label="Gender" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="member_first_name" dbNotNull="false" dbPosition="3" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="memberFirstName" javaType="java.lang.String" jdbcTypeCode="12" label="Member first name" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="member_last_name" dbNotNull="false" dbPosition="4" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="memberLastName" javaType="java.lang.String" jdbcTypeCode="12" label="Member last name" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="phone_number" dbNotNull="false" dbPosition="5" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="phoneNumber" javaType="java.lang.String" jdbcTypeCode="12" label="Phone number" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="email_address" dbNotNull="false" dbPosition="6" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="emailAddress" javaType="java.lang.String" jdbcTypeCode="12" label="Email address" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="orther_member_detail" dbNotNull="false" dbPosition="7" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="ortherMemberDetail" javaType="java.lang.String" jdbcTypeCode="12" label="Orther member detail" maxLength="45" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="member_address_id" dbNotNull="true" dbPosition="8" dbSize="10" dbTypeName="INT" inputType="number" javaName="memberAddressId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Member address id" notNull="true" selected="true"/>
+<fk name="fk_members_addresses">
+<fkcol colname="member_address_id" colref="address_id" deferrable="7" deleterule="3" sequence="1" tablename="members" tableref="addresses" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_addresses" id="LINK_FK_fk_members_addresses_O" inverseSideOf="" javaName="addresses" javaType="Addresses" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="members" targetEntity="Addresses" targetTableName="addresses" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="member_address_id" nullable="true" referencedColumnName="address_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_has_books_members1" id="LINK_FK_fk_members_has_books_members1_I" inverseSideOf="LINK_FK_fk_members_has_books_members1_O" javaName="listOfMembersRequest" javaType="java.util.List" joinTableName="" mappedBy="members" optional="" owningSide="false" sourceTableName="members" targetEntity="MembersRequest" targetTableName="members_request" used="true"/>
+</table>
+<table catalog="libraries" databaseType="TABLE" javaBean="MembersRequest" name="members_request" schema="">
+<column dbComment="" dbDefaultValue="" dbName="members_member_id" dbNotNull="true" dbPosition="1" dbSize="10" dbTypeName="INT" inputType="number" javaName="membersMemberId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Members member id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="books_isbn" dbNotNull="true" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="booksIsbn" javaType="java.lang.Integer" jdbcTypeCode="4" label="Books isbn" notNull="true" selected="true"/>
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="request_id" dbNotNull="true" dbPosition="3" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="requestId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Request id" notNull="true" selected="true"/>
+<column dateType="D" dbComment="" dbDefaultValue="" dbName="date_requested" dbNotNull="false" dbPosition="4" dbSize="10" dbTypeName="DATE" inputType="date" javaName="dateRequested" javaType="java.util.Date" jdbcTypeCode="91" label="Date requested" notNull="false" selected="true"/>
+<column dateType="D" dbComment="" dbDefaultValue="" dbName="date_located" dbNotNull="false" dbPosition="5" dbSize="10" dbTypeName="DATE" inputType="date" javaName="dateLocated" javaType="java.util.Date" jdbcTypeCode="91" label="Date located" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="orther_request_detail" dbNotNull="false" dbPosition="6" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="ortherRequestDetail" javaType="java.lang.String" jdbcTypeCode="12" label="Orther request detail" maxLength="45" notNull="false" selected="true"/>
+<fk name="fk_members_has_books_books1">
+<fkcol colname="books_isbn" colref="isbn" deferrable="7" deleterule="3" sequence="1" tablename="members_request" tableref="books" updaterule="3"/>
+</fk>
+<fk name="fk_members_has_books_members1">
+<fkcol colname="members_member_id" colref="member_id" deferrable="7" deleterule="3" sequence="1" tablename="members_request" tableref="members" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_has_books_books1" id="LINK_FK_fk_members_has_books_books1_O" inverseSideOf="" javaName="books" javaType="Books" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="members_request" targetEntity="Books" targetTableName="books" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="books_isbn" nullable="true" referencedColumnName="isbn" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="fk_members_has_books_members1" id="LINK_FK_fk_members_has_books_members1_O" inverseSideOf="" javaName="members" javaType="Members" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="members_request" targetEntity="Members" targetTableName="members" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="members_member_id" nullable="true" referencedColumnName="member_id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+</table>
+</tableList>
+</root>
